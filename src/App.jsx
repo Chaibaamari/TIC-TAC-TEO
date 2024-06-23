@@ -6,6 +6,10 @@ import Log from './components/Log';
 import { COMBINITION } from './COMBINITION';
 import GameOver from './components/GameOver';
 
+const PLAYER = {
+  X: "Player 1",
+  O: "Player 2",
+};
 function DeriveActivePlayer(turnGame) {
     let currentTurn = 'X';
       
@@ -15,10 +19,7 @@ function DeriveActivePlayer(turnGame) {
     return currentTurn;
   }
 function App() {
-  const [playerName, setPlayerName] = useState({
-    X: "Player 1",
-    O: "Player 2"
-  });
+  const [playerName, setPlayerName] = useState(PLAYER);
 const [turnGame , setTurnGame] = useState([])
   let activePlayer =  DeriveActivePlayer(turnGame)
   const initialGAmeBored = [
